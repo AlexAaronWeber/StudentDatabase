@@ -1,0 +1,15 @@
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/bin/Debug/net6.0/StudentDatabase
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/bin/Debug/net6.0/StudentDatabase.deps.json
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/bin/Debug/net6.0/StudentDatabase.runtimeconfig.json
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/bin/Debug/net6.0/StudentDatabase.dll
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/bin/Debug/net6.0/ref/StudentDatabase.dll
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/bin/Debug/net6.0/StudentDatabase.pdb
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.csproj.AssemblyReference.cache
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.AssemblyInfoInputs.cache
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.AssemblyInfo.cs
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.csproj.CoreCompileInputs.cache
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.dll
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/ref/StudentDatabase.dll
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.pdb
+/Users/Alex/Projects/StudentDatabase/StudentDatabase/obj/Debug/net6.0/StudentDatabase.genruntimeconfig.cache

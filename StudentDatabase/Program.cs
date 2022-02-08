@@ -11,17 +11,79 @@ Console.WriteLine("Welcome to our Student Portal! Let's learn about the students
 bool looping = true; 
 while (looping)
 {
+    int indexSearch = 0;
+    while (true) { 
+        Console.WriteLine($"Which student do you want to learn about? 1-{names.Length}: ");
+        for (int i = 0; i < names.Length; i++)
+        {
+         Console.WriteLine($"{i+1}. {names[i]}");
+        }
+        string studentName = Console.ReadLine();
+        if (names.Contains(studentName)) 
+        {
+            indexSearch = Array.IndexOf(names, studentName) +1;
+            break;
+        }
+        
+        else if (indexSearch >= 1 && indexSearch <= names.Length)
+        {
+            indexSearch = int.Parse(Console.ReadLine());
+            break;
+        }
+        else
+        {
+            Console.WriteLine("That was not valid");
+        }
+    }
 
-    Console.Write("Enter a number 1-7: ");
-    int indexSearch = int.Parse(Console.ReadLine()) - 1;
+        Console.WriteLine($"Student {indexSearch} is {names[indexSearch - 1]}");
+
+        while (true)
+        {
+            Console.Write("Which category would you like to know? Enter 'Hometown' or 'Favorite Food' ");
+            string categorySearch = Console.ReadLine().Trim().ToLower();
+            if (categorySearch == "hometown" || categorySearch.Contains("home") || categorySearch.Contains("town"))
+            {
+                Console.WriteLine($"{names[indexSearch - 1]}'s hometown is {homeTowns[indexSearch - 1]}");
+                break;
+            }
+            else if (categorySearch == "favorite food" || categorySearch.Contains("favorite") || categorySearch.Contains("food"))
+            {
+                Console.WriteLine($"{names[indexSearch - 1]}'s favorite food is {favFoods[indexSearch - 1]}");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Did you spell that right?");
+            }
+        }
+
+
+        while (true)
+        {
+            Console.Write("Would you like to learn about another student? Enter yes/no: ");
+            string loopchoice = Console.ReadLine().ToLower().Trim();
+            if (loopchoice == "y" || loopchoice == "yes")
+            {
+                looping = true;
+                break;
+            }
+            else if (loopchoice == "n" || loopchoice == "no")
+            {
+                looping = false;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("That was not an option");
+            }
+        }
+    }
+    
     //string student = FindInArray(names, indexSearch); --dont really need a method to do this
     //string hometown = FindInArray(homeTowns, indexSearch);
     //string favFood = FindInArray(favFoods, indexSearch);
-    string student = names[indexSearch];
-    string hometown = homeTowns[indexSearch];
-    string favFood = favFoods[indexSearch];
-
-    Console.WriteLine($"Student {indexSearch} is {student}");
+    
     //while (true)
     //{
     //    Console.Write("How do you want to search? Enter: number, name, or list to see a roster ");
@@ -30,9 +92,6 @@ while (looping)
     //    {
     //        Console.Write("Enter a number 1-7: ");
     //        int indexSearch = int.Parse(Console.ReadLine()) - 1;
-    //        //string student = FindInArray(names, indexSearch); --dont really need a method to do this
-    //        //string hometown = FindInArray(homeTowns, indexSearch);
-    //        //string favFood = FindInArray(favFoods, indexSearch);
     //        string student = names[indexSearch];
     //        string hometown = homeTowns[indexSearch];
     //        string favFood = favFoods[indexSearch];
@@ -58,50 +117,6 @@ while (looping)
     //    }
     //}
 
-
-
-    while (true)
-    {
-        Console.Write("Which category would you like to know? Enter 'Hometown' or 'Favorite Food' ");
-        string categorySearch = Console.ReadLine().Trim().ToLower();
-        if (categorySearch == "hometown" || categorySearch.Contains("home") || categorySearch.Contains("town"))
-        {
-            Console.WriteLine($"{student}'s hometown is {hometown}");
-            break;
-        }
-        else if (categorySearch == "favorite food" || categorySearch.Contains("favorite") || categorySearch.Contains("food"))
-        {
-            Console.WriteLine($"{student}'s favorite food is {favFood}");
-            break;
-        }
-        else
-        {
-            Console.WriteLine("Did you spell that right?");
-        }
-    }
-
-
-    while (true)
-    {
-        Console.Write("Would you like to learn about another student? Enter yes/no: ");
-        string loopchoice = Console.ReadLine().ToLower().Trim();
-        if (loopchoice == "y" || loopchoice == "yes")
-        {
-            looping = true;
-            break;
-        }
-        else if (loopchoice == "n" || loopchoice == "no")
-        {
-            looping = false;
-            break;
-        }
-        else
-        {
-            Console.WriteLine("That was not an option");
-        }
-    }
-
-}
 
 
 //---------------------METHODS----------------------
@@ -145,3 +160,6 @@ static void DisplayAll (string[] values)
 //    }
 //    return string[];
 //}
+
+
+
